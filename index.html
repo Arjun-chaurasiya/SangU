@@ -1,30 +1,83 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SangU Passport Seva Kendra</title>
+    <title>SangU Passport Seva Kendra - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        .whatsapp-float img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img src="/Image/SangU.png" alt="SangU Logo" class="logo">
-        <h1>SangU Passport Seva Kendra</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="mission.html">Mission</a>
-            <a href="vision.html">Vision</a>
-            <a href="services.html">Services</a>
-            <a href="fees.html">Service Fees</a>
+    <header class="main-header">
+        <div class="logo-title">
+            <img src="logo.png" alt="SangU Logo" class="logo">
+            <h1>SangU Passport Seva Kendra</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="mission.html">Mission</a></li>
+                <li><a href="vision.html">Vision</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="fees.html">Service Fees</a></li>
+            </ul>
         </nav>
     </header>
-    <main>
-        <h2>Welcome to SangU Passport Seva Kendra</h2>
-        <p>Your trusted partner for all passport-related services in Bengaluru.</p>
+
+    <section class="hero">
+        <img src="https://source.unsplash.com/1200x350/?passport,travel" alt="Passport Banner" class="hero-image">
+        <div class="hero-text">
+            <h2>Your Passport Journey Starts Here</h2>
+            <p>We make passport services simple, secure, and stress-free.</p>
+        </div>
+    </section>
+
+    <main class="content">
+        <section>
+            <h2>Welcome to SangU Passport Seva Kendra</h2>
+            <p>At SangU Passport Seva Kendra, we provide end-to-end support for all passport-related services including fresh applications, renewals, tatkal services, and corrections. With expert guidance, transparent processes, and timely updates, your passport is in safe hands.</p>
+            <img src="https://source.unsplash.com/800x400/?office,service" alt="Office Setup" style="width: 100%; margin-top: 20px; border-radius: 8px;">
+        </section>
+
+        <section style="margin-top: 40px;">
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li>✅ Hassle-free documentation support</li>
+                <li>✅ Appointment booking assistance</li>
+                <li>✅ Affordable pricing – ₹2300 (normal), ₹4500 (tatkal)</li>
+                <li>✅ Personalized help and regular updates</li>
+                <li>✅ Convenient location in BTM Layout, Bengaluru</li>
+            </ul>
+        </section>
     </main>
-    <footer>
-        <p>© 2025 SangU Passport Seva Kendra</p>
+
+    <footer class="main-footer">
+        <div class="footer-info">
+            <p>📍 22nd Cross Rd, EWS Colony, BTM 2nd Stage, BTM Layout, Bengaluru, Karnataka 560076</p>
+            <p>📞 Contact us: +91-7906973405 | ✉️ Email: Arjunkmr1997@gmail.com</p>
+        </div>
+        <div class="footer-copy">
+            <p>© 2025 SangU Passport Seva Kendra. All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- WhatsApp Chat Icon -->
+    <a class="whatsapp-float" href="https://wa.me/917906973405?text=I%20want%20to%20apply%20for%20a%20passport" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp">
+    </a>
 </body>
 </html>

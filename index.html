@@ -314,15 +314,51 @@
             margin-top: 3rem;
         }
 
-        .feature-item {
-            text-align: center;
-            padding: 1.5rem;
+        /* Feature Icons */
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            transition: all 0.3s ease;
         }
 
-        .feature-item i {
-            font-size: 3rem;
-            color: #ff6b6b;
-            margin-bottom: 1rem;
+        .feature-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .feature-item:hover .feature-icon {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(238, 90, 36, 0.4);
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Passport floating animation */
+        .passport-illustration {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
         }
 
         .feature-item h3 {
@@ -484,6 +520,288 @@
             animation: pulse 2s infinite;
         }
 
+        /* Hero Stats */
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            min-width: 120px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ff6b6b;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .passport-illustration {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Quick Links Section */
+        .quick-links {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .quick-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .quick-link-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            text-decoration: none;
+            color: white;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quick-link-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .quick-link-card:hover::before {
+            left: 100%;
+        }
+
+        .quick-link-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .link-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .link-icon i {
+            font-size: 2rem;
+            color: #ff6b6b;
+        }
+
+        .quick-link-card:hover .link-icon {
+            transform: scale(1.1);
+            background: rgba(255,255,255,0.3);
+        }
+
+        .quick-link-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .quick-link-card p {
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .link-arrow {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .quick-link-card:hover .link-arrow {
+            opacity: 1;
+            transform: translateX(5px);
+        }
+
+        .help-note {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 3rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .help-note i {
+            font-size: 1.5rem;
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            padding: 2rem 1rem;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(238, 90, 36, 0.3);
+        }
+
+        .step-icon {
+            width: 100px;
+            height: 100px;
+            background: #f8f9fa;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem auto 1.5rem;
+            border: 4px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .process-step:hover .step-icon {
+            border-color: #ff6b6b;
+            transform: scale(1.05);
+        }
+
+        .step-icon img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .process-step h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .process-step p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .testimonial-image {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .testimonial-image i {
+            font-size: 2.5rem;
+            color: #ff6b6b;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .customer-info h4 {
+            margin-bottom: 0.5rem;
+            color: #ff6b6b;
+        }
+
+        .rating {
+            color: #ffc107;
+        }
+
+        .rating i {
+            margin: 0 2px;
+        }
+
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -584,8 +902,28 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
+            <div class="passport-illustration">
+                <div class="passport-icon">
+                    <i class="fas fa-passport"></i>
+                </div>
+            </div>
             <h1>Your Passport Journey Starts Here</h1>
-            <p>Fast, Reliable & Hassle-Free Passport Services in Bengaluru</p>
+            <p>Fast, Reliable & Hassle-Free Passport Services in Bengaluru<br>
+            <strong>Expert Guidance • Quick Processing • Transparent Pricing</strong></p>
+            <div class="stats-row">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
             <div class="cta-buttons">
                 <a href="#contact" class="btn btn-primary">
                     <i class="fas fa-rocket"></i>
@@ -599,7 +937,53 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Quick Links Section -->
+    <section class="quick-links">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white;">Official Passport Portals</h2>
+                <p style="color: rgba(255,255,255,0.9);">Direct access to government passport services</p>
+            </div>
+            <div class="quick-links-grid">
+                <a href="https://portal2.passportindia.gov.in/" target="_blank" class="quick-link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <h3>Passport Seva Portal</h3>
+                    <p>Official Government Portal for Passport Applications</p>
+                    <div class="link-arrow"><i class="fas fa-external-link-alt"></i></div>
+                </a>
+                <a href="https://www.passportindia.gov.in/AppOnlineProject/statusTracker/trackStatusInpNew" target="_blank" class="quick-link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Track Application</h3>
+                    <p>Check Your Passport Application Status Online</p>
+                    <div class="link-arrow"><i class="fas fa-external-link-alt"></i></div>
+                </a>
+                <a href="https://www.passportindia.gov.in/AppOnlineProject/online/procFormSubOnl" target="_blank" class="quick-link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Book Appointment</h3>
+                    <p>Schedule Your Passport Office Visit</p>
+                    <div class="link-arrow"><i class="fas fa-external-link-alt"></i></div>
+                </a>
+                <a href="https://www.passportindia.gov.in/AppOnlineProject/welcomeLink#tocontent" target="_blank" class="quick-link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>Document Advisor</h3>
+                    <p>Check Required Documents for Your Application</p>
+                    <div class="link-arrow"><i class="fas fa-external-link-alt"></i></div>
+                </a>
+            </div>
+            <div class="help-note">
+                <i class="fas fa-info-circle"></i>
+                <p><strong>Need Help?</strong> Our experts can assist you with navigating these portals and completing your applications. Contact us for personalized support!</p>
+            </div>
+        </div>
+    </section>
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
@@ -609,51 +993,224 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-file-alt"></i>
+                        <i class="fas fa-id-card"></i>
                     </div>
                     <h3>Fresh Passport Applications</h3>
-                    <p>Complete assistance for new passport applications with document verification and appointment booking.</p>
+                    <p>Complete assistance for new passport applications with document verification, form filling, and appointment booking. We guide you through every step of the process.</p>
+                    <ul style="text-align: left; margin-top: 1rem; padding-left: 1rem;">
+                        <li>Document verification & checklist</li>
+                        <li>Online form filling assistance</li>
+                        <li>Appointment booking at PSK</li>
+                        <li>Photo & signature specifications</li>
+                    </ul>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-sync-alt"></i>
+                        <i class="fas fa-redo-alt"></i>
                     </div>
                     <h3>Passport Renewals</h3>
-                    <p>Quick and efficient renewal services for expired passports with minimal documentation.</p>
+                    <p>Quick and efficient renewal services for expired or soon-to-expire passports with minimal documentation and faster processing times.</p>
+                    <ul style="text-align: left; margin-top: 1rem; padding-left: 1rem;">
+                        <li>Expired passport renewals</li>
+                        <li>Validity extension services</li>
+                        <li>Address change updates</li>
+                        <li>Name change corrections</li>
+                    </ul>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-bolt"></i>
                     </div>
                     <h3>Tatkal Services</h3>
-                    <p>Urgent passport services for immediate travel needs with expedited processing.</p>
+                    <p>Urgent passport services for immediate travel needs with expedited processing. Get your passport in just 3-5 working days.</p>
+                    <ul style="text-align: left; margin-top: 1rem; padding-left: 1rem;">
+                        <li>Emergency passport issuance</li>
+                        <li>3-5 days processing time</li>
+                        <li>Priority appointment booking</li>
+                        <li>Express document processing</li>
+                    </ul>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-search"></i>
                     </div>
                     <h3>Lost/Damaged Passport</h3>
-                    <p>Professional assistance for lost or damaged passport replacement with police verification support.</p>
+                    <p>Professional assistance for lost or damaged passport replacement with police verification support and proper documentation.</p>
+                    <ul style="text-align: left; margin-top: 1rem; padding-left: 1rem;">
+                        <li>Police verification assistance</li>
+                        <li>Loss report preparation</li>
+                        <li>Damaged passport replacement</li>
+                        <li>Affidavit preparation support</li>
+                    </ul>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-child"></i>
+                        <i class="fas fa-baby"></i>
                     </div>
                     <h3>Minor Passport Support</h3>
-                    <p>Specialized services for children's passport applications with parent consent documentation.</p>
+                    <p>Specialized services for children's passport applications with parent consent documentation and simplified procedures.</p>
+                    <ul style="text-align: left; margin-top: 1rem; padding-left: 1rem;">
+                        <li>Birth certificate verification</li>
+                        <li>Parent consent documentation</li>
+                        <li>School ID requirements</li>
+                        <li>Minor-specific procedures</li>
+                    </ul>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-calendar-check"></i>
+                        <i class="fas fa-calendar-alt"></i>
                     </div>
-                    <h3>Appointment Booking</h3>
-                    <p>Hassle-free appointment scheduling and document review before submission.</p>
+                    <h3>Appointment & Support</h3>
+                    <p>Hassle-free appointment scheduling, document review, and comprehensive support throughout the passport application process.</p>
+                    <ul style="text-align: left; margin-top: 1rem; padding-left: 1rem;">
+                        <li>PSK appointment booking</li>
+                        <li>Document review & verification</li>
+                        <li>Status tracking assistance</li>
+                        <li>Post-submission support</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple 4-Step Process</h2>
+                <p>We make passport applications easy and stress-free</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Consultation</h3>
+                    <p>Contact us via WhatsApp or visit our office. We'll assess your requirements and guide you on the documentation needed.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <h3>Documentation</h3>
+                    <p>We help you prepare and verify all required documents, fill the online application form, and ensure everything is in order.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Appointment</h3>
+                    <p>We book your appointment at the nearest Passport Seva Kendra and provide guidance for the appointment day.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Delivery</h3>
+                    <p>Track your application status and receive your passport at your doorstep. We keep you updated throughout the process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white;">What Our Customers Say</h2>
+                <p style="color: rgba(255,255,255,0.9);">Real experiences from satisfied customers</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <p>"Excellent service! Got my passport in just 4 days with their Tatkal service. Very professional and helpful throughout the process."</p>
+                    <div class="customer-info">
+                        <h4>Rajesh Kumar</h4>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <p>"SangU team made my passport renewal so easy. They handled everything from documents to appointment booking. Highly recommended!"</p>
+                    <div class="customer-info">
+                        <h4>Priya Sharma</h4>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <i class="fas fa-male"></i>
+                    </div>
+                    <p>"Best passport service in Bengaluru! Transparent pricing, quick service, and excellent customer support. My whole family got passports through them."</p>
+                    <div class="customer-info">
+                        <h4>Arun Patel</h4>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/external-woman-people-flaticons-flat-flat-icons.png" alt="Customer">
+                    </div>
+                    <p>"SangU team made my passport renewal so easy. They handled everything from documents to appointment booking. Highly recommended!"</p>
+                    <div class="customer-info">
+                        <h4>Priya Sharma</h4>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/external-businessman-people-flaticons-flat-flat-icons.png" alt="Customer">
+                    </div>
+                    <p>"Best passport service in Bengaluru! Transparent pricing, quick service, and excellent customer support. My whole family got passports through them."</p>
+                    <div class="customer-info">
+                        <h4>Arun Patel</h4>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="pricing" id="pricing">
         <div class="container">
             <div class="section-header">
@@ -698,34 +1255,46 @@
             </div>
             <div class="features-grid">
                 <div class="feature-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>100% Secure</h3>
-                    <p>Your documents are safe with us. We maintain complete confidentiality and security.</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>100% Secure & Confidential</h3>
+                    <p>Your personal documents and information are completely safe with us. We maintain the highest standards of data security and confidentiality throughout the process.</p>
                 </div>
                 <div class="feature-item">
-                    <i class="fas fa-clock"></i>
-                    <h3>Quick Processing</h3>
-                    <p>Fast-track your passport applications with our efficient processing system.</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Lightning Fast Processing</h3>
+                    <p>Our streamlined process and expert knowledge ensure your passport application is processed quickly without any delays or complications.</p>
                 </div>
                 <div class="feature-item">
-                    <i class="fas fa-headset"></i>
-                    <h3>24/7 Support</h3>
-                    <p>Round-the-clock customer support for all your queries and concerns.</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>24/7 Expert Support</h3>
+                    <p>Our dedicated team is available round-the-clock to answer your queries, provide updates, and assist you at every step of your passport journey.</p>
                 </div>
                 <div class="feature-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Prime Location</h3>
-                    <p>Conveniently located in BTM Layout, easily accessible by public transport.</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-map-pin"></i>
+                    </div>
+                    <h3>Prime BTM Location</h3>
+                    <p>Conveniently located in the heart of BTM Layout, easily accessible by metro, bus, and private transport. Free parking available for customers.</p>
                 </div>
                 <div class="feature-item">
-                    <i class="fas fa-user-tie"></i>
-                    <h3>Expert Team</h3>
-                    <p>Experienced professionals who know the passport process inside out.</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Certified Experts</h3>
+                    <p>Our team consists of certified passport consultants with 5+ years of experience and 99% success rate in passport applications.</p>
                 </div>
                 <div class="feature-item">
-                    <i class="fas fa-rupee-sign"></i>
-                    <h3>Affordable Rates</h3>
-                    <p>Competitive pricing with no hidden charges. Pay only what's quoted.</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Transparent Pricing</h3>
+                    <p>No hidden charges or surprise fees. What we quote is what you pay. We offer the most competitive rates in Bengaluru with premium service quality.</p>
                 </div>
             </div>
         </div>
@@ -744,15 +1313,20 @@
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <h4>Office Address</h4>
-                            <p>22nd Cross Rd, EWS Colony, BTM 2nd Stage, BTM Layout, Bengaluru, Karnataka 560076</p>
+                            <h4>Visit Our Office</h4>
+                            <p><strong>SangU Passport Seva Kendra</strong><br>
+                            22nd Cross Rd, EWS Colony<br>
+                            BTM 2nd Stage, BTM Layout<br>
+                            Bengaluru, Karnataka 560076</p>
+                            <p style="margin-top: 0.5rem; color: #666;"><i class="fas fa-subway"></i> <strong>Near:</strong> Jayadeva Metro Station (5 min walk)</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone-alt"></i>
                         <div>
-                            <h4>Phone Number</h4>
-                            <p>+91-7906973405</p>
+                            <h4>Call Us Now</h4>
+                            <p style="font-size: 1.2rem; font-weight: 600; color: #ff6b6b;">+91-7906973405</p>
+                            <p style="color: #666;">Available: Mon-Sat, 9:00 AM - 6:00 PM</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -760,13 +1334,19 @@
                         <div>
                             <h4>Email Address</h4>
                             <p>Arjunkmr1997@gmail.com</p>
+                            <p style="color: #666;">We respond within 2 hours</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-clock"></i>
+                        <i class="fab fa-whatsapp"></i>
                         <div>
-                            <h4>Working Hours</h4>
-                            <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                            <h4>WhatsApp Chat</h4>
+                            <p>Quick responses & instant support</p>
+                            <a href="https://wa.me/917906973405?text=Hi,%20I%20need%20help%20with%20passport%20application" 
+                               target="_blank" 
+                               style="background: #25d366; color: white; padding: 0.5rem 1rem; border-radius: 25px; text-decoration: none; display: inline-block; margin-top: 0.5rem;">
+                               <i class="fab fa-whatsapp"></i> Chat Now
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -824,20 +1404,21 @@
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <a href="#home">Home</a>
-                    <a href="#services">Services</a>
-                    <a href="#pricing">Pricing</a>
-                    <a href="#about">About Us</a>
-                    <a href="#contact">Contact</a>
+                    <h3>Quick Access</h3>
+                    <a href="https://portal2.passportindia.gov.in/" target="_blank">Passport Seva Portal</a>
+                    <a href="https://www.passportindia.gov.in/AppOnlineProject/statusTracker/trackStatusInpNew" target="_blank">Track Application</a>
+                    <a href="https://www.passportindia.gov.in/AppOnlineProject/online/procFormSubOnl" target="_blank">Book Appointment</a>
+                    <a href="https://www.passportindia.gov.in/AppOnlineProject/welcomeLink#tocontent" target="_blank">Document Advisor</a>
+                    <a href="https://www.passportindia.gov.in/AppOnlineProject/pdf/fees_structure.pdf" target="_blank">Fee Structure</a>
                 </div>
                 <div class="footer-section">
                     <h3>Our Services</h3>
-                    <a href="#">Fresh Passport</a>
-                    <a href="#">Passport Renewal</a>
-                    <a href="#">Tatkal Service</a>
-                    <a href="#">Lost Passport</a>
-                    <a href="#">Minor Passport</a>
+                    <a href="#services">Fresh Passport</a>
+                    <a href="#services">Passport Renewal</a>
+                    <a href="#services">Tatkal Service</a>
+                    <a href="#services">Lost Passport</a>
+                    <a href="#services">Minor Passport</a>
+                    <a href="#services">PCC Services</a>
                 </div>
                 <div class="footer-section">
                     <h3>Contact Info</h3>
